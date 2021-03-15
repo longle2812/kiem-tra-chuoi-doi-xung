@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var s = '123321';
+    debugger;
+    do {
+        var condition = check(s);
+        s = newString(s);
+    }
+    while ((condition) && (s !== ""));
+    if (condition) {
+        alert(true);
+    }
+    else alert(false);
+
+    function check(s) {
+        let s0 = s.substring(0,1);
+        let sn = s.substring(s.length-1,s.length);
+        if (s0 == sn) {
+            return true;
+        }
+        else return false;
+    }
+
+    function newString(s){
+        s = s.slice(1,s.length);
+        s = s.slice(0, s.length - 1);
+        return s;
+    }
+</script>
+</html>
